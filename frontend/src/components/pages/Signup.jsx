@@ -1,67 +1,66 @@
 import {
-    Flex,
-    Box,
-    FormControl,
-    FormLabel,
-    Input,
-    InputGroup,
-    HStack,
-    InputRightElement,
-    Stack,
-    Button,
-    Heading,
-    Text,
-    useColorModeValue,
-    FormHelperText,
-    FormErrorMessage,
-  } from "@chakra-ui/react";
-  import { Link, Navigate, useNavigate } from "react-router-dom";
-  import { useState } from "react";
-  import { ViewIcon, ViewOffIcon } from "@chakra-ui/icons";
-  import Navbar from '../Navbar/Navbar'
+  Flex,
+  Box,
+  FormControl,
+  FormLabel,
+  Input,
+  InputGroup,
+  HStack,
+  InputRightElement,
+  Stack,
+  Button,
+  Heading,
+  Text,
+  useColorModeValue,
+  FormHelperText,
+  FormErrorMessage,
+} from "@chakra-ui/react";
+import { Link, useNavigate } from "react-router-dom";
+import { useState } from "react";
+import { ViewIcon, ViewOffIcon } from "@chakra-ui/icons";
+import axios from 'axios';
+import Navbar from '../Navbar/Navbar';
 
-  
-  import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
-  
-  export default function Signup() {
-    const [showPassword, setShowPassword] = useState(false);
-    const [email, setEmail] = useState("");
-    const [password, setPassword] = useState("");
-    const navigate = useNavigate();
-  
-    const handleEmailChange = (e) => {
-      setEmail(e.target.value);
-    };
-  
-    const isError = email === "";
-    const handlePasswordChange = (e) => {
-      setPassword(e.target.value);
-    };
-  
-    const signUp = (e) => {
-        console.log("click")
-      e.preventDefault();
-      const auth = getAuth();
-  
-      createUserWithEmailAndPassword(auth, email, password)
-        .then((userCredential) => {
-          // Signed in
-          const user = userCredential.user;
-          console.log("user: ", user);
-          navigate("/signin");
-        // <Navigate to="/signin" />
-          // ...
-        })
-        .catch((error) => {
-          const errorCode = error.code;
-          const errorMessage = error.message;
-          // ..
-        });
-    };
-  
-    return (
-<>
-<Navbar url="https://cdn1.tripoto.com/media/filter/tst/img/2/Image/1555426507_1552566979_manali_ppc.jpg" />
+export default function Signup() {
+  const [showPassword, setShowPassword] = useState(false);
+  const [username, setUsername] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [message, setMessage] = useState('');
+  const navigate = useNavigate();
+
+  const handleEmailChange = (e) => {
+    setEmail(e.target.value);
+  };
+
+  const handleUsernameChange = (e) => {
+    setUsername(e.target.value);
+  };
+
+  const isError = email === "";
+  const handlePasswordChange = (e) => {
+    setPassword(e.target.value);
+  };
+
+  const signUp = async (e) => {
+    e.preventDefault();
+
+    try {
+      const response = await axios.post('http://localhost:5000/api/auth/signup', {
+        username,
+        email,
+        password,
+      });
+      setMessage(response.data.msg);
+      navigate('/signin');
+    } catch (error) {
+      setMessage(error.response.data.msg || 'Signup failed');
+    }
+  };
+
+  return (
+    <>
+      <Navbar url="https://cdn1.tripoto.com/media/filter/tst/img/2/Image/1555426507_1552566979_manali_ppc.jpg" />
 
       <Flex
         minH={"100vh"}
@@ -84,15 +83,9 @@ import {
             <Stack spacing={4}>
               <HStack>
                 <Box>
-                  <FormControl id="firstName" isRequired>
-                    <FormLabel>First Name</FormLabel>
-                    <Input type="text" />
-                  </FormControl>
-                </Box>
-                <Box>
-                  <FormControl id="lastName">
-                    <FormLabel>Last Name</FormLabel>
-                    <Input type="text" />
+                  <FormControl id="username" isRequired>
+                    <FormLabel>Username</FormLabel>
+                    <Input value={username} onChange={handleUsernameChange} type="text" />
                   </FormControl>
                 </Box>
               </HStack>
@@ -149,12 +142,11 @@ import {
                   </Link>
                 </Text>
               </Stack>
+              {message && <Text color="red.500" align="center">{message}</Text>}
             </Stack>
           </Box>
         </Stack>
-      </Flex>
-
-
+      </Flex>
     </>
-    );
-  }
+  );
+}

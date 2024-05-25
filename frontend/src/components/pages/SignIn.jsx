@@ -1,58 +1,54 @@
 import {
-    Flex,
-    Box,
-    FormControl,
-    FormLabel,
-    Input,
-    Checkbox,
-    Stack,
-    Button,
-    Heading,
-    Text,
-    useColorModeValue,
-  } from "@chakra-ui/react";
-  import { Link, Navigate, useNavigate } from "react-router-dom";
-  import Navbar from '../Navbar/Navbar'
+  Flex,
+  Box,
+  FormControl,
+  FormLabel,
+  Input,
+  Checkbox,
+  Stack,
+  Button,
+  Heading,
+  Text,
+  useColorModeValue,
+} from "@chakra-ui/react";
+import { Link, useNavigate } from "react-router-dom";
+import axios from 'axios';
+import { useState } from "react";
+import Navbar from '../Navbar/Navbar';
 
-  
-  import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
-  import { useState } from "react";
-  
-  export default function SignIn() {
-    const [email, setEmail] = useState();
-    const [password, setPassword] = useState();
-    const navigate = useNavigate();
-    const handleEmail = (e) => {
-      setEmail(e.target.value);
-    };
-  
-    const handlePassword = (e) => {
-      setPassword(e.target.value);
-    };
-  
-    const logIn = () => {
-      const auth = getAuth();
-      signInWithEmailAndPassword(auth, email, password)
-        .then((userCredential) => {
-          // Signed in
-          const user = userCredential.user;
-          console.log("user: ", user);
-          navigate("/");
-          // ...
-        })
-        .catch((error) => {
-          const errorCode = error.code;
-          console.log("errorCode: ", errorCode);
-          const errorMessage = error.message;
-          console.log("errorMessage: ", errorMessage);
-          alert("wrong credential");
-        });
-    };
-    return (
+export default function SignIn() {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [message, setMessage] = useState('');
+  const navigate = useNavigate();
 
-        <>
-         <Navbar url="https://cdn1.tripoto.com/media/filter/tst/img/1339961/Image/1633007008_1597325856_img_20180907_173421.jpg" />
-       
+  const handleEmail = (e) => {
+    setEmail(e.target.value);
+  };
+
+  const handlePassword = (e) => {
+    setPassword(e.target.value);
+  };
+
+  const logIn = async (e) => {
+    e.preventDefault();
+    
+    try {
+      const response = await axios.post('http://localhost:5000/api/auth/login', {
+        email,
+        password,
+      });
+      setMessage(response.data.msg);
+      navigate("/");
+    } catch (error) {
+      setMessage(error.response.data.msg || 'Login failed');
+    }
+  };
+
+  return (
+    <>
+      <Navbar url="https://cdn1.tripoto.com/media/filter/tst/img/1339961/Image/1633007008_1597325856_img_20180907_173421.jpg" />
+
       <Flex
         minH={"100vh"}
         align={"center"}
@@ -63,7 +59,7 @@ import {
           <Stack align={"center"}>
             <Heading fontSize={"4xl"}>Sign in to your account</Heading>
             <Text fontSize={"lg"} color={"gray.600"}>
-              Do you haven't account?{" "}
+              Don't have an account?{" "}
               <Link color="blue" to="/Signup" style={{ color: "blue" }}>
                 Sign up
               </Link>
@@ -108,11 +104,11 @@ import {
                   Sign in
                 </Button>
               </Stack>
+              {message && <Text color="red.500" align="center">{message}</Text>}
             </Stack>
           </Box>
         </Stack>
-      </Flex>
-
+      </Flex>
     </>
-    );
-  }
+  );
+}
