@@ -1,3 +1,4 @@
+import React, { useState } from 'react';
 import {
   Flex,
   Box,
@@ -13,7 +14,6 @@ import {
 } from "@chakra-ui/react";
 import { Link, useNavigate } from "react-router-dom";
 import axios from 'axios';
-import { useState } from "react";
 import Navbar from '../Navbar/Navbar';
 
 export default function SignIn() {
@@ -38,7 +38,9 @@ export default function SignIn() {
         email,
         password,
       });
+      localStorage.setItem('user', JSON.stringify(response.data.user)); // Save user info in local storage
       setMessage(response.data.msg);
+      alert("Login successful");
       navigate("/");
     } catch (error) {
       setMessage(error.response.data.msg || 'Login failed');
