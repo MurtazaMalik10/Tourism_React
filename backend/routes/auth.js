@@ -5,7 +5,7 @@ const User = require('../models/User');
 
 // POST /signup - User signup
 router.post('/signup', async (req, res) => {
-  const { username, email, password } = req.body;
+  const { username, email, password, role } = req.body;
 
   try {
     // Check if user already exists
@@ -19,6 +19,7 @@ router.post('/signup', async (req, res) => {
       username,
       email,
       password,
+      role: role || 'user' // Default role is 'user' if not provided
     });
 
     // Hash password
@@ -53,7 +54,28 @@ router.post('/login', async (req, res) => {
     }
 
     // User authenticated
-    res.json({ msg: 'Login successful' });
+    // Optionally, you can include role information in the response
+    res.json({ msg: 'Login successful', role: user.role });
+  } catch (err) {
+    console.error(err.message);
+    res.status(500).send('Server Error');
+  }
+});
+
+// Example route to update user role to admin
+router.put('/users/:userId/make-admin', async (req, res) => {
+  const { userId } = req.params;
+
+  try {
+    const user = await User.findById(userId);
+    if (!user) {
+      return res.status(404).json({ msg: 'User not found' });
+    }
+
+    user.role = 'admin';
+    await user.save();
+
+    res.json({ msg: 'User role updated to admin successfully' });
   } catch (err) {
     console.error(err.message);
     res.status(500).send('Server Error');
