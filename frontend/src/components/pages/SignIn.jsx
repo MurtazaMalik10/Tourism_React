@@ -38,12 +38,19 @@ export default function SignIn() {
         email,
         password,
       });
-      localStorage.setItem('user', JSON.stringify(response.data.user)); // Save user info in local storage
-      setMessage(response.data.msg);
-      alert("Login successful");
-      navigate("/");
+
+      if (response && response.data) {  // Check if response and response.data are defined
+        localStorage.setItem('user', JSON.stringify(response.data.user));
+        setMessage(response.data.msg);
+        alert("Login successful");
+        navigate(response.data.role === 'admin' ? "/admin" : "/");
+      } else {
+        console.error('Login failed: Invalid response');
+        setMessage('Login failed: Invalid response');
+      }
     } catch (error) {
-      setMessage(error.response.data.msg || 'Login failed');
+      console.error('Login failed:', error.message);
+      setMessage(error.response ? error.response.data.msg : 'Login failed');
     }
   };
 

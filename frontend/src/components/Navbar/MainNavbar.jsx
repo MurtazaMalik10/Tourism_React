@@ -22,7 +22,6 @@ import { HamburgerIcon } from "@chakra-ui/icons";
 export default function MainNavbar() {
   const [dropdown, setDropdown] = useState(false);
   const { isOpen, onOpen, onClose } = useDisclosure();
-  const [placement, setPlacement] = useState("left");
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const navigate = useNavigate();
 

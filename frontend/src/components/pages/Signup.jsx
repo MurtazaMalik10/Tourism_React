@@ -1,3 +1,4 @@
+import React, { useState } from 'react';
 import {
   Flex,
   Box,
@@ -11,12 +12,9 @@ import {
   Button,
   Heading,
   Text,
-  useColorModeValue,
-  FormHelperText,
-  FormErrorMessage,
+  useColorModeValue
 } from "@chakra-ui/react";
 import { Link, useNavigate } from "react-router-dom";
-import { useState } from "react";
 import { ViewIcon, ViewOffIcon } from "@chakra-ui/icons";
 import axios from 'axios';
 import Navbar from '../Navbar/Navbar';
@@ -29,15 +27,14 @@ export default function Signup() {
   const [message, setMessage] = useState('');
   const navigate = useNavigate();
 
-  const handleEmailChange = (e) => {
-    setEmail(e.target.value);
-  };
-
   const handleUsernameChange = (e) => {
     setUsername(e.target.value);
   };
 
-  const isError = email === "";
+  const handleEmailChange = (e) => {
+    setEmail(e.target.value);
+  };
+
   const handlePasswordChange = (e) => {
     setPassword(e.target.value);
   };
@@ -50,6 +47,7 @@ export default function Signup() {
         username,
         email,
         password,
+        role: 'user', // Assuming 'user' role for signup
       });
       setMessage(response.data.msg);
       navigate('/signin');
@@ -89,16 +87,9 @@ export default function Signup() {
                   </FormControl>
                 </Box>
               </HStack>
-              <FormControl id="email" isInvalid={isError}>
+              <FormControl id="email" isRequired>
                 <FormLabel>Email address</FormLabel>
                 <Input value={email} onChange={handleEmailChange} type="email" />
-                {!isError ? (
-                  <FormHelperText color="green.700">
-                    Enter the email you'd like to receive the newsletter on.
-                  </FormHelperText>
-                ) : (
-                  <FormErrorMessage>Email is required.</FormErrorMessage>
-                )}
               </FormControl>
               <FormControl id="password" isRequired>
                 <FormLabel>Password</FormLabel>

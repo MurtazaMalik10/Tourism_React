@@ -45,7 +45,7 @@ const url1={
          py={"4%"}
          mr={"2%"}
       pointerEvents='none'
-      children={< IoSearchSharp size={"20"} />}
+      children={< IoSearchSharp size={"30"} />}
     />
         </InputGroup>
         </Box>
