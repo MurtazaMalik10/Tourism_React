@@ -8,19 +8,16 @@ import { style } from "./packageStyle";
 import Sliders from "./Sliders";
 import { Flex, Heading, Image, Text } from "@chakra-ui/react";
 import Footer from "../Footer";
-
+import db from '../../data/db.json'; // Corrected path to db.json
 export default function Packages() {
   const [data, setData] = useState([]);
   const [tradingData, setTradingData] = useState([]);
 
   const getData = ({ sort, order }) => {
-    return axios.get(`https://trawel-world.onrender.com/data`, {
-      params: {
-        _sort: sort,
-        _order: order,
-      },
-    });
+    // Implement sorting and ordering if necessary, or just return the data
+    return Promise.resolve(db);
   };
+  
 
   useEffect(() => {
     getData({ sort: "price", order: "asc" }).then((res) => {
@@ -114,7 +111,7 @@ export default function Packages() {
         mb={{ lg: "1%" }}
         fontSize={{ base: "20px", lg: "28px" }}
       >
-        Discover the best tour packages on TrawelWorld
+        Discover the best tour packages on PakVentures
       </Heading>
       <Text
         mx="4%"
@@ -124,13 +121,13 @@ export default function Packages() {
         lineHeight={"29px"}
       >
         We all need to get out of our routine and hit the road every once in a
-        while to experience the magic of travel. TrawelWorld offers some of the
-        best tour packages and customised holidays in India and abroad to help
+        while to experience the magic of travel. PakVentures offers some of the
+        best tour packages and customised holidays in Pakistan and abroad to help
         you unwind and discover the world. On offer are a range of travel
         destinations which are perfect for a trip with family or friends. Solo
         travellers can chose from a range of treks and tour packages in budget
-        friendly destinations in India and around the world. Holiday packages on
-        TrawelWorld are handpicked to cater to a variety of travel styles and
+        friendly destinations in Pakistan and around the world. Holiday packages on
+        PakVentures are handpicked to cater to a variety of travel styles and
         requirements.
       </Text>
 
@@ -149,11 +146,11 @@ export default function Packages() {
         style={{ textAlign: "left" }}
         lineHeight={"29px"}
       >
-        There is something for everyone who visits on TrawelWorld platform.
-        Whether you wish to get a taste of India's rich heritage in Rajasthan,
+        There is something for everyone who visits on PakVentures platform.
+        Whether you wish to get a taste of Pakistan rich heritage in Rajasthan,
         or pay a visit to the Himalayas to heal your senses; it's all included.
         Also, on offer are international holiday packages, specially curated for
-        Indian travellers. Witness the breathtaking beaches of Thailand or
+       Pakistan travellers. Witness the breathtaking beaches of Thailand or
         stroll through the bustling cities in Australia. Newlyweds can chose
         from some of the most sought after honeymoon destinations like Maldives
         or Iceland, or go off the beaten path in destinations like China or
@@ -163,9 +160,9 @@ export default function Packages() {
         like Dubai and Malaysia. If you are seeking some serious adventure,
         select from trekking packages through some of the most scenic
         mountainous ranges in the world and capture moments for a lifetime.
-        Skydiving, scuba diving, adventure biking, and much more on TrawelWorld
+        Skydiving, scuba diving, adventure biking, and much more on PakVentures
         - it's a one of the most dynamic selection of trips and activities for
-        Indian travellers.
+        Pakistan  travellers.
       </Text>
 
       <Heading
@@ -174,7 +171,7 @@ export default function Packages() {
         mb={{ lg: "1%" }}
         fontSize={{ base: "20px", lg: "28px" }}
       >
-        How to book holidays with TrawelWorld?
+        How to book holidays with PakVentures?
       </Heading>
       <Text
         mx="4%"
@@ -183,18 +180,18 @@ export default function Packages() {
         style={{ textAlign: "left" }}
         lineHeight={"29px"}
       >
-        Booking holidays on TrawelWorld is as easy as it gets. Pick from
+        Booking holidays on PakVentures is as easy as it gets. Pick from
         hundreds of packages. We will then connect you with your choices of
-        travel providers via email and/or phone. TrawelWorld partners with
+        travel providers via email and/or phone. PakVentures partners with
         leading travel companies in India, like MakeMyTrip, Thomas Cook, SOTC,
         Yatra, to name a few, to help you plan the perfect vacation.
         <br />
         <br />
         Here is the step-by-step guide to booking domestic or international
-        packages on TrawelWorld.
+        packages on PakVentures.
         <br />
         <b>Step 1:</b> Click on the 'Book Holidays' button on the top right
-        corner of any page on TrawelWorld. <br /> <b>Step 2:</b> You will be
+        corner of any page on PakVentures. <br /> <b>Step 2:</b> You will be
         taken to a page with different categories of packages. <br />{" "}
         <b>Step 3:</b> Click on any package to submit your requirements. We will
         attend to your query and put you in touch with a representative from our
@@ -207,7 +204,7 @@ export default function Packages() {
         mb={{ lg: "1%" }}
         fontSize={{ base: "20px", lg: "28px" }}
       >
-        Why book holidays with TrawelWorld?
+        Why book holidays with PakVentures?
       </Heading>
       <Text
         mx="4%"
@@ -216,7 +213,7 @@ export default function Packages() {
         style={{ textAlign: "left" }}
         lineHeight={"29px"}
       >
-        <span style={{ color: "#2f9bdb" }}>TrawelWorld's</span> travel partners
+        <span style={{ color: "#2f9bdb" }}>PakVentures's</span> travel partners
         provide some of the best India tour packages and International tour
         packages. We are passionate about travel and strive to offer experiences
         that matter. We have a team of experienced travellers who can help you

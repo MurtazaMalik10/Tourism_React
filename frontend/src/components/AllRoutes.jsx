@@ -8,7 +8,7 @@ import SignIn from "./pages/SignIn";
 import Signup from "./pages/Signup";
 import Mountaines from "./pages/Mountains";
 import Form from "./pages/Form";
-
+import Booknow from "./pages/Booknow";
 import Admin from "./Admin/Admin";
 import VisitSingapore from "./pages/VisitSingapore";
 import Navbar from "./Navbar/Navbar";
@@ -22,10 +22,11 @@ export default function AllRoutes() {
 
       <Route path="/navbar" element={<Navbar />} />
       <Route path="/packages" element={<Packages />} />
-      <Route path="/Book" element={<Form />} />
+      <Route path="/Book" element={<Form/>} />
       <Route path="/admin" element={<Admin />} />
       <Route path="/Visit Singapore" element={<VisitSingapore />} />
       <Route path="/Beaches" element={<Beaches />} />
+      <Route path="/Booknow" element={<Booknow />} />
       <Route path="/Mountains" element={<Mountaines />} />
       <Route path="/Heritage" element={<Heritage />} />
       <Route path="/signin" element={<SignIn />} />

@@ -22,16 +22,33 @@ export default function SetSlider() {
           delay: 2500,
           disableOnInteraction: false
         }}
-       
         modules={[Autoplay, Pagination, Navigation]}
         className="mySwiper"
-        style={{marginTop:"3%"}}
+        style={{marginTop: "3%"}}
       >
-        <SwiperSlide  >
-            <img style={{width:"92%",  borderRadius: "5px"}} src="https://cdn1.tripoto.com/media/filter/nxxl/img/30751/Image/1665394736_homepage_banner_singapore_copy.jpg" alt="" />
+        <SwiperSlide>
+          <img
+            style={{
+              width: "92%",
+              height: "500px", // Fixed height
+              objectFit: "cover", // Ensures image covers the area and is cropped if necessary
+              borderRadius: "5px"
+            }}
+            src="https://miro.medium.com/v2/resize:fit:828/format:webp/1*sy90CtyE2Lt6uv0lEnaNKw.png"
+            alt=""
+          />
         </SwiperSlide>
-        <SwiperSlide> 
-            <img style={{width:"92%",borderRadius: "5px"}} src="https://cdn1.tripoto.com/media/transfer/img/2224454/Image/1665126895_67098315_6056_4dc2_976b_45c23888b05f.gif" alt="" />
+        <SwiperSlide>
+          <img
+            style={{
+              width: "92%",
+              height: "500px", // Fixed height
+              objectFit: "cover", // Ensures image covers the area and is cropped if necessary
+              borderRadius: "5px"
+            }}
+            src="https://invest.gov.pk/sites/default/files/2021-01/image_2021_01_22T06_57_50_866Z.png"
+            alt=""
+          />
         </SwiperSlide>
       </Swiper>
     </>

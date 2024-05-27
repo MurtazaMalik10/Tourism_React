@@ -108,9 +108,9 @@ export default function Sliders({
                   </Flex>
 
                   <Flex justifyContent={"space-between"} my={"4%"}>
-                   {el.price &&<Text fontWeight={"700"}> ₹ {el.price}
+                   {el.price &&<Text fontWeight={"700"}> Rs {el.price}
                     <span style={{fontWeight:"400",color:"#333" ,fontSize:"14px"}}>{personText}</span> </Text>}
-               {el.price &&<Text className="book">Book Now</Text>}
+               {el.price &&<a href="/Book"> <Text className="book">Book Now</Text></a>}
                     </Flex>
               
                 </Box>

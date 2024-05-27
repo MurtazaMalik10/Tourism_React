@@ -17,6 +17,7 @@ import Sliders from "./pages/Sliders";
 import SetSlider from "./pages/SetSlider";
 import Footer from "./Footer";
 import { Link } from "react-router-dom";
+import db from '../data/db.json';
 
 export default function Home() {
   const [data, setData] = useState([]);
@@ -28,7 +29,7 @@ export default function Home() {
   // const []
 
   const getData = ({ sort, order }) => {
-    return axios.get(`https://trawel-world.onrender.com/data`);
+    return Promise.resolve(db);
   };
 
   useEffect(() => {
@@ -138,13 +139,13 @@ export default function Home() {
         ))}
       </Grid>
 
-      <Box mt={"8%"} mb="4%">
+      <Box mt={"5%"} mb="5%">
         <Image
           display={"block"}
           m={"auto"}
           width={"92%"}
           borderRadius={"5px"}
-          src="https://cdn1.tripoto.com/media/filter/nxxl/img/2215463/Image/1666956480_rajasthan_1.jpg"
+          src="https://pakrism.pk/wp-content/uploads/2024/01/Hunza-Valley-min.jpeg"
           alt=""
         />
       </Box>
@@ -153,7 +154,7 @@ export default function Home() {
         text="PACKAGE"
         personText=" / person"
         setData={setData1}
-        heading="Travel and Learn with Tripoto's Mindful Retreats"
+        heading="Travel and Learn with PakVentures Mindful Retreats"
         data={data1}
       />
       <Sliders
@@ -167,7 +168,7 @@ export default function Home() {
       <Sliders
         slide1={4}
         slide2={4}
-        heading="Plan Your Next Trip Using Tripoto's Complete Destination Guides"
+        heading="Plan Your Next Trip Using PakVentures' Complete Destination Guides"
         data={place}
       />
       <hr style={{ marginTop: "5%" }} />

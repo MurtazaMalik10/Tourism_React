@@ -3,6 +3,7 @@ import { CircularProgress, CircularProgressLabel } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
 import { Input, Button } from "@chakra-ui/react";
 import AdminBtn from "./AdminBtn";
+import db from '../../data/db1.json';
 // import { Button } from '@chakra-ui/react/dist';
 
 export default function AdminAdd({ page }) {
@@ -17,15 +18,8 @@ export default function AdminAdd({ page }) {
     setText(e.target.value);
   };
 
-  const getData = async (page) => {
-    setLoading(true);
-    let res = await fetch(
-      `https://trawel-admin-api.onrender.com/posts?_limit=5&_page=${page}`
-    );
-    let data = await res.json();
-    // console.log("data: ", data);
-    setTodo(data);
-    setLoading(false);
+  const getData = ({ sort, order }) => {
+    return Promise.resolve(db);
   };
 
   useEffect(() => {

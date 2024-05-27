@@ -109,7 +109,7 @@ export default function MainNavbar() {
           </Text>
         </Link>
 
-        <ul className='nav-items'>
+        <ul style={{display:'flex',placeItems:'center'}}className='nav-items'>
           {navItems.map((item) => {
             if (item.title === 'Inspirations') {
               return (
@@ -125,7 +125,17 @@ export default function MainNavbar() {
                     <Link to={item.path}>{item.title}</Link>
                     {dropdown && <Dropdown />}
                   </Text>
-                  {isLoggedIn ? (
+                  
+                </>
+              );
+            }
+            return (
+              <Text marginTop={{ md: '3%', lg: '2%' }} display={{ base: 'none', md: 'block' }} key={item.id} className={item.cName}>
+                <Link to={item.path}>{item.title}</Link>
+              </Text>
+            );
+          })}
+{isLoggedIn ? (
                     <Button
                       display={{ base: 'none', md: 'block', lg: 'block' }}
                       onClick={handleLogout}
@@ -138,19 +148,18 @@ export default function MainNavbar() {
                       Logout
                     </Button>
                   ) : (
-                    <Text fontSize={'18px'} color={'white'} display={{ base: 'block', md: 'none', lg: 'none' }}>
-                      <Link to={'/signin'}>Sign In</Link>
-                    </Text>
+                    <Button
+                    display={{ base: 'none', md: 'block', lg: 'block' }}
+                    onClick={handleLogout}
+                    bg={'blue.400'}
+                    color={'white'}
+                    _hover={{
+                      bg: 'blue.500',
+                    }}
+                  >
+                    Sign In
+                  </Button>
                   )}
-                </>
-              );
-            }
-            return (
-              <Text marginTop={{ md: '3%', lg: '2%' }} display={{ base: 'none', md: 'block' }} key={item.id} className={item.cName}>
-                <Link to={item.path}>{item.title}</Link>
-              </Text>
-            );
-          })}
         </ul>
       </Flex>
     </Box>

@@ -1,0 +1,305 @@
+{"data":{
+    "packages": [
+        {
+          "id":"1",
+          "image": "https://images.unsplash.com/photo-1562913346-61ae3ab9277e?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+          "des": "A world of wonder awaits; all you need to do is explore",
+          "location": "Hunza",
+          "dayNight": "3D · 2N",
+          "price": "6000"
+          
+        },
+        {
+          "id":"2",
+          "image": "https://i.dawn.com/primary/2015/04/552534a77b507.jpg?r=961640394",
+          "des": "Let your unforgettable journey begin right here, right now.",
+          "location": "Skardu",
+          "dayNight": "3D · 2N",
+          "price": "7000"
+          
+        },
+        {
+          "id":"3",
+          "image": "https://www.marveloustourism.com/wp-content/uploads/2015/09/Jheel-Saif-ul-Malook-1024x595.jpg",
+          "des": "Adventure awaits just around the corner; are you ready?",
+          "location": "Naran Kaghan Shogran",
+          "dayNight": "2D · 1N",
+          "price": "3699"
+          
+        },
+        {
+          "id":"4",
+          "image": "https://nothernpakistan.wordpress.com/wp-content/uploads/2019/02/the-river-neelum-in-tau-butt-long-exposure..jpg?w=768&h=461",
+          "des": "Find your personal paradise in the heart of nature",
+          "location": "Neelum Valley",
+          "dayNight": "3D · 2N",
+          "price": "9850"
+          
+        },
+        {
+          "id":"5",
+          "image": "https://wander-lush.org/wp-content/uploads/2020/01/RakaposhiMountainPakistanSkazzjyCanvaPro.jpg",
+          
+          "des": "Wander far and wide to find the true essence of yourself.",
+          "location": "Swat",
+          "dayNight": "4D · 3N",
+          "price": "13750"
+         
+        },
+        {
+          "id":"6",
+          "image": "https://images.unsplash.com/photo-1668936782695-5f7657dc793d?q=80&w=2074&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+          "des": "Unleash your inner explorer and uncover new wonders.",
+          "location": "Kumrat",
+          "dayNight": "3D · 2N",
+          "price": "8600"
+          
+        },
+        {
+          "id":"7",
+          "image": "https://flypakistan.pk/assets/img/attractions/Shandur%20Pass.jpg",
+          "des": "Where every moment is a cherished memory waiting to happen",
+          "location": "Chitral",
+          "dayNight": "3D · 2N",
+          "price": "10770"
+          
+        },
+        {
+          "id":"8",
+          "image": "https://images.unsplash.com/photo-1622988592277-e55ded3816e7?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fG11cnJlZSUyQyUyMHBha2lzdGFufGVufDB8fDB8fHww",
+          "des": "Escape the mundane and dive into extraordinary experiences.",
+          "location": "Murree",
+          "dayNight": "3D · 2N",
+          "price": "4799"
+          
+        },
+        {
+          "id":"9",
+          "image": "https://flypakistan.pk/assets/img/attractions/Basho%20Valley.png",
+          "des": "Experience the extraordinary with every step you take",
+          "location": "Basho Valley",
+          "dayNight": "3D · 2N",
+          "price": "5900"
+          
+        },
+        {
+          "id":"10",
+          "image": "https://wander-lush.org/wp-content/uploads/2020/01/KhunjerabPassPakistanViroj_SupornpraditCanvaPro.jpg",
+          "des": "Journey to places where wonder and excitement never end",
+          "location": "Deosai",
+          "dayNight": "3D · 2N",
+          "price": "7500"
+          
+        },
+        {
+          "id":"11",
+          "image": "https://wander-lush.org/wp-content/uploads/2020/01/BamboretValleyPakistanPawopa3336CanvaPro.jpg",
+          "des": "Breathtaking views are calling your name, will you answer?",
+          "location": "Naltar",
+          "dayNight": "3D · 2N",
+          "price": "8500"
+          
+        },{
+          "id":"37",
+          "image": "https://wander-lush.org/wp-content/uploads/2020/01/YarkhunValleySamanthaIntentionalDetours.jpg",
+          "des": "Unlock the magic of travel and let the world amaze you.",
+          "location": "Khunjerab Pass",
+          "dayNight": "3D · 2N",
+          "price": "8600"
+          
+        }
+      
+       ],
+       "treading":[
+       
+        {
+          "id":"12",
+          "image": "https://pyaraskardu.com/wp-content/uploads/2023/02/fairy-1-960x576.jpg",
+          "des":"Leh Ladakh packages",
+          "location": "Fairy Meadows",
+          "dayNight": "6D · 5N",
+          "price": "25,000"
+          
+        },
+        {
+          "id":"13",
+          "image": "https://wander-lush.org/wp-content/uploads/2020/01/RohtasFortPakistanSimonImagesCanvaPro.jpg",
+          "des":"Kashmir Packages",
+          "location": "Kashmir",
+          "dayNight": "4D · 3N",
+          "price": "8500"
+          
+        }, {
+          "id":"14",
+          "image": "https://wander-lush.org/wp-content/uploads/2020/01/BamboretValleyPakistanPawopa3336CanvaPro.jpg",
+          "des":"Naran Package",
+          "location": "Babusar Top",
+          "dayNight": "5D · 4N",
+          "price": "18000"
+          
+        }, {
+          "id":"15",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/c/cc/Malam_Jaba%2C_Swat%2C_Pakistan.JPG",
+          "des":"Swat Packages",
+          "location": "Malam Jabba",
+          "dayNight": "7D · 6N",
+          "price": "22000"
+          
+        }, {
+          "id":"16",
+          "image": "https://wander-lush.org/wp-content/uploads/2020/01/KhunjerabPassPakistanViroj_SupornpraditCanvaPro.jpg",
+          "des":"Chitral Packages",
+          "location": "Kalash",
+          "dayNight": "4D · 3N",
+          "price": "12000"
+          
+        }, {
+          "id":"17",
+          "image": "https://i0.wp.com/gbit.pk/wp-content/uploads/2023/03/Shigar-Valley.webp?fit=1280%2C857&ssl=1",
+          "des":"Shigar Packages",
+          "location": "Shigar Valley ",
+          "dayNight": "5D · 4N",
+          "price": "29000"
+          
+        }, {
+          "id":"18",
+          "image": "https://www.travelertrails.com/wp-content/uploads/2023/03/Shangrila-Lake-2.jpg",
+          "des":"Skardu Packages",
+          "location": "Shangrilla Lake",
+          "dayNight": "4D · 3N",
+          "price": "14000"
+          
+        }, {
+          "id":"19",
+          "image": "https://res.cloudinary.com/www-travelpakistani-com/image/upload/v1673870514/siri_paye_meadows_pakistan.jpg",
+          "des":"Shogran Package",
+          "location": "Siri Paye Meadows",
+          "dayNight": "6D · 5N",
+          "price": "18000"
+          
+        },
+        {
+          "id":"20",
+          "image": "https://i.dawn.com/primary/2018/10/5bd0dc4d1da21.jpg",
+          "des":"Kaghan Packages",
+          "location": "Lake Saiful Malook",
+          "dayNight": "5D · 4N",
+          "price": "12000"
+          
+        }
+       
+       ],
+       "home1":[
+        {
+          "id":"21",
+          "image":"https://image-tc.galaxy.tf/wijpeg-3gt6qxxtr44wl6zfevhnpyt0g/exterior3.jpg?width=1600&height=1066",
+          "des":"Retreat to a cozy haven after a day of adventures.",
+          "location":"Tranquil Retreat"
+        },{
+          "id":"22",
+          "image":"https://cf.bstatic.com/xdata/images/hotel/max1024x768/183084874.jpg?k=acdfb99896e4f5b1b92f77aa348a70fbae31bb145be00ca58024d7739e05608e&o=&hp=1",
+          "des":"Find tranquility and peace in our serene accommodations",
+          "location":"Harmony Haven"
+        },{
+          "id":"23",
+          "image":"https://image-tc.galaxy.tf/wijpeg-dqm9pc2so8ywci5kzh55o0s5c/exterior1.jpg?width=1600&height=1066",
+          "des":"Where comfort meets elegance in perfect harmony.",
+          "location":"Elegance Inn"
+        },{
+          "id":"24",
+          "image":"https://image-tc.galaxy.tf/wijpeg-dpekkkio9e54dgpqijbr67u8/exterior5.jpg?width=1600&height=1066",
+          "des":"Experience the perfect blend of comfort and luxury.",
+          "location":"Luxury Escape"
+        },{
+          "id":"25",
+          "image":"https://dynamic-media-cdn.tripadvisor.com/media/photo-o/19/ee/a4/1f/serena-shigar-fort.jpg?w=700&h=-1&s=1",
+          "des":"Stay where every detail is designed for your comfort.",
+          "location":"Comfort Corner"
+        },{
+          "id":"26",
+          "image":"https://image-tc.galaxy.tf/wijpeg-6d3qln9k9khnaf2bkg1krue5h/royalsuite1.jpg?width=1600&height=1066",
+          "des":"Escape to a place where comfort knows no bounds",
+          "location":"Boundless Comfort"
+        },{
+          "id":"27",
+          "image":"https://cf.bstatic.com/xdata/images/hotel/max1024x768/183085162.jpg?k=0cb91f455274905055c9b54199c04d567efde951ae193104c1484a718d520753&o=&hp=1",
+          "des":"Where modern amenities meet timeless elegance",
+          "location":"Timeless Stay"
+        },{
+          "id":"28",
+          "image":"https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Shigar_Fort_by_ZILL_NIAZI_22.jpg/1200px-Shigar_Fort_by_ZILL_NIAZI_22.jpg",
+          "des":"Experience a stay that feels like a warm embrace.",
+          "location":"Embrace Inn"
+        }
+       ],
+       "home2" :[
+        {
+          "id":"29",
+          "image":"https://cf.bstatic.com/xdata/images/hotel/max1024x768/183084823.jpg?k=ef7e27e7da8975439856b8823862a746b21744bbc3fb2da4529c5179f9ffb5f8&o=&hp=1",
+          "name":"Ahmed Raza",
+          "des":"Uncover Hidden Gems for Your Next Adventure"
+        },{
+          "id":"30",
+          "image":"https://dynamic-media-cdn.tripadvisor.com/media/photo-o/22/08/fe/55/mesmerizing-and-beautiful.jpg?w=700&h=-1&s=1",
+          "name":"Bilal Khan",
+          "des":"Witness the Beauty of Blooming Flowers This Season"
+        },{
+          "id":"31",
+          "image":"https://cdn1.tripoto.com/media/filter/tst/img/2215463/Image/1666949651_1636600759_110.png",
+          "name":"Daniyal Ali",
+          "des":"Top Places to Feel the Winter Chill"
+        },{
+          "id":"32",
+          "image":"https://cdn1.tripoto.com/media/filter/tst/img/2215463/Image/1666949736_1635179153_pahalgam_gulmarg.jpeg",
+          "name":"Faizan Ahmed",
+          "des":"Explore Winter Destinations Beyond the Usual Spots"
+        },{
+          "id":"33",
+          "image":"https://cf.bstatic.com/xdata/images/hotel/max500/435751103.jpg?k=77458aba6e0e6813f9f6a8bae6c544f5dbcfc9f019571dce6aeddf635ec6f4be&o=",
+          "name":" Hassan Riaz",
+          "des":"Embark on an Exciting Trek This Year"
+        },{
+          "id":"34",
+          "image":"https://s-light.tiket.photos/t/01E25EBZS3W0FY9GTG6C42E1SE/rsfit720360gsm/tix-hotel/images-web/2021/12/21/01a6dbca-2571-4eb3-a87e-1d21d5dfae06-1640082316507-b9c23bccb1bf8d1fe40313486419af79.jpg",
+          "name":"Ibrahim Malik",
+          "des":"Take a Refreshing Trek This Year"
+        },{
+          "id":"35",
+          "image":"https://static2.tripoto.com/media/filter/tst/img/1/SpotDocument/1478950878_1453102404_panamik_hot_geyser_springs_in_nubra_valley_ladakh.jpg",
+          "name":"Junaid Saeed",
+          "des":"Immerse yourself in comfort and elegance"
+        },{
+          "id":"36",
+          "image":"https://cdn1.tripoto.com/media/filter/tst/img/2215463/Image/1666949788_1508739878_img_9360.jpg",
+          "name":"Kashif Hussain",
+          "des":"Don't Miss This Exciting Festival"
+        }
+       ],
+       "placeData":[
+        {
+          "id":"38",
+          "image":"https://cdn1.tripoto.com/media/filter/tst/img/2215463/Image/1715250384_nz1.png"
+        },
+        {
+          "id":"39",
+          "image":"https://cdn1.tripoto.com/media/filter/tst/img/2215463/Image/1669205399_germany.jpeg.webp"
+        },  {
+          "id":"40",
+          "image":"https://cdn1.tripoto.com/media/filter/tst/img/1339961/Image/1613732480_4_4.jpg.webp"
+        },  {
+          "id":"41",
+          "image":"https://cdn1.tripoto.com/media/filter/tst/img/1756031/Image/1599216481_rajasthan.jpg.webp"
+        },  {
+          "id":"42",
+          "image":"https://cdn1.tripoto.com/media/filter/tst/img/1339961/Image/1613732417_2_10.jpg"
+        },  {
+          "id":"43",
+          "image":"https://cdn1.tripoto.com/media/filter/tst/img/1339961/Image/1613732456_dubai.jpg"
+        },  {
+          "id":"44",
+          "image":"https://cdn1.tripoto.com/media/filter/tst/img/1339961/Image/1613732480_4_4.jpg"
+        }
+       ]
+  }
+
+}

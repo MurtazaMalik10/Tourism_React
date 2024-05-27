@@ -24,18 +24,13 @@ export const navItems = [
   //   path: "/admin",
   //   cName: "nav-item",
   // },
-  {
-    id: 5,
-    title: "Sign In",
-    path: "/signin",
-    cName: "nav-item",
-  }
+
 ];
 
 export const serviceDropdown = [
   {
     id: 1,
-    title: "Visit Singapore",
+    title: "Visit Pakistan",
     path: "/Visit Singapore",
     cName: "submenu-item",
   },

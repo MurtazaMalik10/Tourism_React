@@ -21,52 +21,43 @@ import { style } from "./packageStyle";
 import { Autoplay, Pagination, Navigation } from "swiper";
 import { Heading } from "@chakra-ui/react";
 import Footer from "../Footer";
+import db from '../../data/db.json'; // Corrected path to db.json
 
 const btnImage = [
   {
-    img: "https://cdn1.tripoto.com/media/filter/tst/img/1745358/Image/1666081573_flipbook.jpg",
+    img: "https://cdn1.tripoto.com/media/filter/tst/img/2215463/Image/1696926392_caregory_ui_cards_updated_correct_dimension_beaches.png",
   },
   {
-    img: "https://cdn1.tripoto.com/media/filter/tst/img/1745358/Image/1643704984_shop.jpg",
+    img: "https://cdn1.tripoto.com/media/filter/tst/img/2215463/Image/1696926407_category_ui_cards_updated_version_correct_dimensions_mountains.png",
   },
   {
-    img: "https://cdn1.tripoto.com/media/filter/tst/img/1745358/Image/1643966989_sg_web_series_button.jpg",
+    img: "https://cdn1.tripoto.com/media/filter/tst/img/2215463/Image/1696926423_category_ui_cards_updated_version_correct_dimensions_festivals.png",
   },
   {
-    img: "https://cdn1.tripoto.com/media/filter/tst/img/1745358/Image/1643704774_events.jpg",
+    img: "https://cdn1.tripoto.com/media/filter/tst/img/2215463/Image/1696926437_category_ui_cards_updated_version_correct_dimension_roadtrips.png",
   },
-  {
-    img: "https://cdn1.tripoto.com/media/filter/tst/img/1745358/Image/1643705006_whats_new_in_sg.jpg",
-  },
-  {
-    img: "https://cdn1.tripoto.com/media/filter/tst/img/1745358/Image/1643967015_sg_for_foodies.jpg",
-  },
-  {
-    img: "https://cdn1.tripoto.com/media/filter/tst/img/1745358/Image/1643705019_videos.jpg",
-  },
-  {
-    img: "https://cdn1.tripoto.com/media/filter/tst/img/1745358/Image/1643704729_articles.jpg",
-  },
+
 ];
 
 const headStyle = {
   marginTop: "141px",
-  marginBottom: "-138px",
+  marginBottom: "-200px",
   textAlign: "left",
   marginLeft: "3%",
 };
 
 export default function VisitSingapore({
-  headingText = "Reimagine Singapore With Tripoto",
+  headingText = "Reimagine Pakistan With PakVentures",
   hide = true,
-  spanText = "Reimagine Singapore With Tripoto",
+  spanText = "Reimagine Pakistan With PakVentures",
 }) {
   const [data1, setData1] = useState([]);
 
   const getData = ({ sort, order }) => {
-    return axios.get(`https://trawel-world.onrender.com/data`);
+    // Implement sorting and ordering if necessary, or just return the data
+    return Promise.resolve(db);
   };
-
+  
   useEffect(() => {
     getData({ sort: "price", order: "asc" }).then((res) => {
       setData1(res.data.packages);
@@ -126,36 +117,66 @@ export default function VisitSingapore({
       >
         <SwiperSlide>
           <img
-            style={{ width: "93%", margin: "5%",borderRadius:"5px" }}
-            src="https://cdn1.tripoto.com/media/filter/nxxl/img/1516992/Image/1666870699_image_9_1.png"
+              style={{
+                width: "93%",
+                height: "500px",
+                margin:"5%", // Fixed height
+                objectFit: "cover", // Ensures image covers the area and is cropped if necessary
+                borderRadius: "5px"
+              }}
+              src="https://miro.medium.com/v2/resize:fit:828/format:webp/1*sy90CtyE2Lt6uv0lEnaNKw.png"
+              alt=""
+          />
+        </SwiperSlide>
+        <SwiperSlide>
+        <img
+            style={{
+              width: "92%",
+              height: "500px", // Fixed height
+              margin:"5%",
+              objectFit: "cover", // Ensures image covers the area and is cropped if necessary
+              borderRadius: "5px"
+            }}
+            src="https://invest.gov.pk/sites/default/files/2021-01/image_2021_01_22T06_57_50_866Z.png"
             alt=""
           />
         </SwiperSlide>
         <SwiperSlide>
-          <img
-            style={{ width: "93%", margin: "5%",borderRadius:"5px" }}
-            src="https://cdn1.tripoto.com/media/transfer/img/1516992/Image/1666013189_horror_banner_web1.gif"
+        <img
+            style={{
+              width: "92%",
+              height: "500px", // Fixed height
+              margin:"5%",
+              objectFit: "cover", // Ensures image covers the area and is cropped if necessary
+              borderRadius: "5px"
+            }}
+            src="https://invest.gov.pk/sites/default/files/2021-01/image_2021_01_22T06_57_50_866Z.png"
             alt=""
           />
         </SwiperSlide>
         <SwiperSlide>
-          <img
-            style={{ width: "93%", margin: "5%",borderRadius:"5px" }}
-            src="https://cdn1.tripoto.com/media/filter/nxxl/img/1516992/Image/1663838531_flipbook_banner_2.jpg"
-            alt=""
+        <img
+              style={{
+                width: "92%",
+                height: "500px", // Fixed height
+                margin:"5%",
+                objectFit: "cover", // Ensures image covers the area and is cropped if necessary
+                borderRadius: "5px"
+              }}
+              src="https://miro.medium.com/v2/resize:fit:828/format:webp/1*sy90CtyE2Lt6uv0lEnaNKw.png"
+              alt=""
           />
         </SwiperSlide>
         <SwiperSlide>
-          <img
-            style={{ width: "93%", margin: "5%",borderRadius:"5px" }}
-            src="https://cdn1.tripoto.com/media/filter/nxxl/img/1745358/Image/1657185311_baby_shark_banner_web.jpeg"
-            alt=""
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img
-            style={{ width: "93%", margin: "5%",borderRadius:"5px" }}
-            src="https://cdn1.tripoto.com/media/filter/nxxl/img/1516992/Image/1666870699_image_9_1.png"
+        <img
+            style={{
+              width: "92%",
+              height: "500px", // Fixed height
+              margin:"5%",
+              objectFit: "cover", // Ensures image covers the area and is cropped if necessary
+              borderRadius: "5px"
+            }}
+            src="https://invest.gov.pk/sites/default/files/2021-01/image_2021_01_22T06_57_50_866Z.png"
             alt=""
           />
         </SwiperSlide>
@@ -172,8 +193,7 @@ export default function VisitSingapore({
         mb="2%"
         style={{ textAlign: "left" }}
         lineHeight={"29px"}>
-        Everything that comes with the Singapore tag is made with passion. New
-        collaborations with Airbnb and Krisshop in India are testament to that.
+        Everything that comes with the Pakistan tag is made with passion.
         Bring the luxurious Singapore shopping experience at home by browsing
         through clothing, food and home decor products. Click on what you like
         and start shopping!
@@ -203,7 +223,7 @@ export default function VisitSingapore({
           fontSize={"18px"}
           fontWeight={"700"}
           >
-            Wines, self care, gifts and more: shop Singapore-special products on
+            Wines, self care, gifts and more: shop Pakistan-special products on
             Krisshop
           </Text>
           </Box>
@@ -257,7 +277,7 @@ export default function VisitSingapore({
             //   fontSize: "20px",
             // }}
           >
-            Airbnb’s Online Experiences: Made with Passion
+     
           </Text>   </Box>
    
         
@@ -267,7 +287,7 @@ export default function VisitSingapore({
         text="PACKAGE"
         personText=" / person"
         setData={setData1}
-        heading="Travel and Learn with Tripoto's Mindful Retreats"
+        heading="Travel and Learn with PakVentures Mindful Retreats"
         data={data1}
       />
       <hr style={{marginTop:'4%', border: "1px solid #e4dddd" }} />

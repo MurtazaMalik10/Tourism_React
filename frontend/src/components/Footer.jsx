@@ -64,7 +64,7 @@ import { Link } from 'react-router-dom';
             spacing={8}>
             <Stack spacing={6}>
               <Box display="flex" alignItems={"center"} ml="-10%">
-              <Image src={logo}  link="/" alt="" className="image" mr={{base:"-5%",lg:"-7%"}} /> <Text fontSize={"20px"} fontWeight={"700"}>Trawel World</Text> 
+              <Image src={logo}  link="/" alt="" className="image" mr={{base:"-5%",lg:"-7%"}} /> <Text fontSize={"20px"} fontWeight={"700"}>PakVentures</Text> 
               </Box>
               <Text fontSize={'sm'}>
                 © All rights reserved
@@ -82,7 +82,7 @@ import { Link } from 'react-router-dom';
               </Stack>
             </Stack>
             <Stack align={'flex-start'}>
-              <ListHeader>Trawel World</ListHeader>
+              <ListHeader>PakVentures</ListHeader>
               <Link to={'/'}>About us</Link>
               <Link to={'/'}>Blog</Link>
               <Link to={'/'}>Contact us</Link>
